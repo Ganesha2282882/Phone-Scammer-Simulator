@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center><h1>Phone Scammer Simulator</h1></center>
+<center><p>Click on the computer to make money. Click on the phone to buy upgrades.</p></center>
+<center><p id="demo" onclick="myFunction()"><img src="computer.png" width="350" height="350"/></p></center>
+<center><p id="demo" onclick="myStore()"><img src="store.png" width="130" height="130"></img></p></center>
+<center></center>
+<script>
+var money = 0;
+var has_up1 = 0;
+function myFunction() {
+  money = money + 1;
+  
+  alert(money);
+}
+
+function myStore() {
+  var stuff = prompt('1: Buy a phone(10) 2: Buy a website(100) 3: Collaborate with hackers(1000)')
+  if (stuff='1') {
+    if (money<10) {
+      alert('You do not have enough money.');
+    }
+    else {
+      money = money - 10
+      money = money + 20
+    }
+  }
+  else if (stuff='2') {
+    if (money<100) {
+      alert('You do not have enough money.');
+    }
+    else {
+      money = money - 100
+      money = money + 200
+    }
+  }
+  else if (stuff='3') {
+    if (money<1000) {
+      alert('You do not have enough money.');
+    }
+    else {
+      money = money - 1000
+      money = money + 2000
+    }
+  }
+}
+</script>
+
+</body>
+</html>
